@@ -8,4 +8,9 @@ public class NegativeElementException extends Exception{
     public int getIndex() {
         return index;
     }
+
+    @Override
+    public String getMessage() {
+        return "negative element at index " + index;
+    }
 }

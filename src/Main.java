@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,13 +7,18 @@ public class Main {
         int[] arr2 = {-1, 2, 3};
         int[] arr3 = {1, -2, 3};
         int[] arr4 = {0, 0, 0};
+
+        handledSum(arr1);
+        handledSum(arr2);
+        handledSum(arr3);
+        handledSum(arr4);
+    }
+
+    public static void handledSum(int[] array) {
         try {
-            System.out.println(sum(arr1));
-            System.out.println(sum(arr2));
-            System.out.println(sum(arr3));
-            System.out.println(sum(arr4));
+            System.out.println(sum(array));
         } catch (NegativeElementException err) {
-            System.out.println(err);
+            System.out.println("Cannot sum " + Arrays.toString(array) + ": " + err.getMessage());
         }
     }
 
