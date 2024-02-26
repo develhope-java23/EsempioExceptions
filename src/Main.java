@@ -16,21 +16,11 @@ public class Main {
 
     public static void handledSum(int[] array) {
         try {
-            System.out.println(sumArray(array));
+            System.out.println(Sum.sumArray(array));
         } catch (NegativeElementException err) {
             System.out.println("Cannot sum " + Arrays.toString(array) + ": " + err.getMessage());
         }
     }
 
-    public static int sumArray(int[] arr) throws NegativeElementException {
 
-        int result = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < 0) {
-                throw new NegativeElementException(i);
-            }
-            result += arr[i];
-        }
-        return result;
-    }
 }
