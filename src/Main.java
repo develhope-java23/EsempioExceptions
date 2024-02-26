@@ -16,13 +16,13 @@ public class Main {
 
     public static void handledSum(int[] array) {
         try {
-            System.out.println(sum(array));
+            System.out.println(sumArray(array));
         } catch (NegativeElementException err) {
             System.out.println("Cannot sum " + Arrays.toString(array) + ": " + err.getMessage());
         }
     }
 
-    public static int sum(int[] arr) throws NegativeElementException {
+    public static int sumArray(int[] arr) throws NegativeElementException {
 
         int result = 0;
         for (int i = 0; i < arr.length; i++) {
